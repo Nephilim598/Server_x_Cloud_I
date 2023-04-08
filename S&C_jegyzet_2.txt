@@ -1,0 +1,54 @@
+MMC - microsoft management console
+Ctrl + S - lehet menteni az aktuális helyzeteket
+jelszó: Abcd1234
+
+Ellenőrizni átjelentkezéssel
+
+Új felhasználó:
+	fáj
+	beépülőmodul hozzáad
+	helyi felhasználók és csoportok
+	hozzáad (helyin)
+	felhasználók jobb klikk új felhasználó
+	(bekell pipálni a "soha nem jár le pw" és kikell szedni a bejelentkezéskori megváltoztatást)
+	
+	
+Csoport létrehozása:
+	csoportok jobb klikk
+	új csoport
+	csoport neve majd felhasználó hozzáadása / névellenőrzésnél ez a forma a jó "DESKTOP-PJ9R2AE\Fanni"
+	
+	
+	
+Jogosultságkezelés:
+	adott fájra jobb klikk
+	tulajdonságok
+	biztonság
+	szerkesztés
+	hozzáadás / névellenőrzésnél ez a forma a jó "DESKTOP-PJ9R2AE\Fanni"
+	
+	biztonság
+	engedélyek módosítása
+	Öröklődés letiltása
+	konvertálás
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
