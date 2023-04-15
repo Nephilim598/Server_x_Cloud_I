@@ -1,0 +1,286 @@
+https://www.webler.hu/tananyag/parancssor-windows.pdf
+https://szit.hu/doku.php?id=oktatas:operacios_rendszerek:windows:parancssor
+
+
+
+lemez kiadás: 
+Eszközkezelő - Lemezmeghajtók (CD/DVD ROM) eject
+
+powershell "(new-object -COM Shell.Application).NameSpace(17).ParseName('D:').InvokeVerb('Eject')"
+
+
+
+
+IP Configuration – ipconfig
+A kapcsolatok megtekintése – ipconfig /all
+A DNS Cache tartalmának megtekintése – ipconfig /displaydns
+A DNS Cache törlése – ipconfig /flushdns
+Minden kapcsolat eldobása – ipconfig /release
+Minden kapcsolat megújítása – ipconfig /renew
+DHCP frissítése és DNS újralekérése – ipconfig /registerdns
+DHCP Class ID megtekintése – ipconfig /showclassid
+DHCP Class ID módosítása – ipconfig /setclassid
+
+
+WiFi index-ének lekérdezése:
+wmic nic get name, index
+WiFi lekapcsolása (index az előző paranccsal nyerhető ki):
+wmic path win32_networkadapter where index=2 call disable
+WiFi bekapcsolása (index, mint fent):
+wmic path win32_networkadapter where index=2 call enable
+
+
+
+
+
+Fontos parancsok
+assoc Megjeleníti vagy módosítja a fájlkiterjesztés társításait.
+
+break A bővített CTRL+C ellenőrzés ki- és bekapcsolása DOS
+rendszereken. XP alatt hibakeresővel való futtatáskor egy
+fixen kódolt töréspontra fog lépni.
+
+call Eljárást vagy kötegfájlt hív meg másik kötegfájlból.
+
+cd (chdir) Az aktuális könyvtár nevének megjelenítése, vagy
+könyvtárváltás.
+
+cls Képernyő törlése.
+color Beállítja a parancssor szövegének és hátterének színeit.
+
+copy Egy vagy több fájl másolása másik helyre.
+
+date Dátum megjelenítése vagy beállítása.
+
+del (erase) Egy vagy több fájl (könyvtár) törlése.
+
+dir Egy könyvtárban levő fájlok és alkönyvtárak listájának
+megjelenítése.
+
+echo Üzenetek megjelenítése és a parancsmegjelenítés (echo) be
+vagy kikapcsolása.
+
+endlocal Kötegfájl lokális feldolgozásának vége.
+
+exit Kilépés a Cm.exe-programból (parancsértelmező) vagy az
+aktuális kötegelt parancsfájlból.
+
+for Megadott parancs futtatása egy fájlhalmaz minden egyes
+elemére.
+
+ftype A fáljkiterjesztéshez társított fájltípusok megjelenítése vagy
+módosítása.
+
+goto A Cm.exe egy kötegfájl címkézett sorára való irányítása.
+
+if Feltételtől függő feldolgozás kötegelt programokban.
+md (mkdir) Könyvtár létrehozása.
+
+move Fájlok áthelyezése, valamint fájlok és könyvtárak átnevezése.
+
+path Végrehajtható fájlokhoz állít be vagy jelenít meg keresési
+útvonalat.
+
+pause Kötegfájl feldolgozásának a felfüggesztése és az ’A
+folytatáshoz nyomjon meg egy billentyűt...’ üzenet
+megjelenítése.
+
+popd Váltás a PUSHD-parancs által eltárolt könyvtárra.
+prompt A Cm.exe promptját módosítja.
+
+pushd Eltárolja az aktuális könyvtárat a POPD-parancs számára,
+majd a megadott könyvtárra vált.
+
+rd (rmdir) Könyvtár eltávolítása (törlése).
+
+rem Megjegyzések beírása kötegfájlba vagy a Config.sys fájlba.
+
+ren (rename) Fájl vagy fájlok átnevezése.
+
+set A Cm.exe környezeti változóinak megjelenítése, beállítása
+vagy eltávolítása.
+
+setlocal Kötegfájl lokális feldolgozási módjának kezdete.
+
+shift Helyettesíthető karakterek helyének eltolása a kötegfájlban.
+
+start Egy adott program vagy parancsfájl futtatása egy külön
+ablakban.
+
+time A rendszerdátum megjelenítése vagy beállítása.
+
+title Parancssorablak címkéjének beállítása.
+
+type Szövegfájl(ok) tartalmának megjelenítése.
+
+verify A lemezre írás utáni ellenőrzést kapcsolja be, illetve ki.
+
+vol A lemez kötetcímkéjének és sorozatszámának a
+megjelenítése, ha léteznek.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Néhány hasznos, parancssorból meghívható program és eszköz:
+Beállítások, kontroll-panelek
+Vezérlőpult = control
+Felügyeleti eszközök = control admintools
+Személyre szabás = control desktop
+Mappabeállítások = control folders
+Betűkészlet = control fonts
+Billentyűzet tulajdonságok = control keyboard
+Egér tulajdonságok = control mouse vagy main.cpl
+Hálózati kapcsolatok = control netconnections vagy ncpa.cpl
+Eszközök és nyomtatók = control printers
+Feladatütemező = control schedtasks
+Felhasználói fiókok = netplwiz vagy control userpasswords2
+Programok és szolgáltatások = appwiz.cpl
+Dátum és idő = timedate.cpl
+Képernyő megjelenítés (felbontás) = desk.cpl
+Internet tulajdonságok = inetcpl.cpl
+Telefon és modem = telephon.cpl
+Energiagazdálkodás = powercfg.cpl
+Területi beállítások = intl.cpl
+A rendszer tulajdonságai = sysdm.cpl
+Műveletközpont = wscui.cpl
+Hang = mmsys.cpl
+Windows tűzfal = firewall.cpl
+Hang beállítások = mmsys.cpl
+Helyinformáció = telephon.cpl
+Eszközkezelő: hdwwiz.cpl vagy devmgmt.msc
+iSCSI-kezdeményező = iscsicpl
+Engedélyezéskezelő = azman.msc
+Tanúsítványkezelő = certmgr.msc
+Számítógép-kezelés = compmgmt.msc vagy CompMgmtLauncher
+Lemezkezelés = diskmgmt.msc
+Eseménynapló = eventvwr.msc
+Helyi csoportházirend-szerkesztő = gpedit.msc
+Helyi biztonsági házirend = secpol.msc
+Helyi felhasználók és csoportok = lusrmgr.msc
+Teljesítményfigyelő = perfmon.msc
+Eredő házirend = rsop.msc
+Szolgáltatások = services.msc
+Megosztott mappák = fsmgmt.msc
+Fokozott biztonságú Windows tűzfal = wf.msc
+Windows Management Infrastructure = wmimgmt.msc
+Komponensszolgáltatások = dcomcnfg
+Windows szolgáltatások = optionalfeatures
+Rendszerkonfiguráció = msconfig
+Rendszerinformáció = msinfo32
+A Windows fiókadatbázisának biztonságossá tétele (SAM zárolás) = syskey
+Rendszer konfiguráció szerkesztő = sysedit
+
+
+
+
+
+
+Fontos segédeszközök, alkalmazások:
+Lemezellenőrző = chkdsk
+Lemezkarbantartó = cleanmgr
+Lemeztöredezettség-mentesító = dfrgui
+Diskpart (partíciók, lemezek kezelése) = diskpart
+Registry szerkesztő = regedit vagy regedit.exe vagy regedt32
+Feladatkezelő = taskmgr
+Folyamatleállító = taskkill
+Folyamatlistázó = tasklist
+Tárolt felhasználónevek és jelszavak = credwiz
+Rendszerinformáció = systeminfo
+
+
+
+
+
+
+
+Egyéb hasznos programok, parancsok:
+Számológép = calc
+Karaktertábla = charmap
+Intéző (fájlkezelő) = explorer
+Jegyzettömb = notepad
+Kijelentkezés = logoff
+Leállítás = shutdown
+
+
+
+
+
+
+Továbbiak:
+DirectX diagnosztikai eszköz = dxdiag
+Digitalizáló kalibrálási eszköz = tabcal
+DPI beállítása = dpiscaling
+Illesztőprogram-ellenőrző = verifier
+Titkosított fájlrendszer = rekeywiz
+Fájlaláírás ellenőrző = sigverif
+Távsegítség = msra
+Távoli asztal = mstsc
+Iexpress Wizard = iexpress
+Microsoft-támogatási diagnosztikai eszköz = msdt
+Mobilközpont = mblctr
+Kezeléstechnikai központ = utilman
+Képernyő-billentyűzet = osk
+Nagyító = magnify
+Nyomtatóáttelepítés = PrintBrmUi
+Képmetsző = snippingtool
+Hangrögzítő = soundrecorder
+Hangerőszabályozó = sndvol
+ODBC adatforrás-felügyelő = odbcad32
+SQL Client Configuration = cliconfg
+Trusted Platform Module = TpmInit
+Aktiválás = slui
+Biztonsági mentés és visszaállítás = sdclt
+Képolvasó = wiaacmgr
+Windows Update = wuapp
+Windows Update önálló telepítő = wusa
+Megosztott mappa létrehozása varázsló = shrpubw
+
+
+
+
+Haszontalan kacatok:
+DVD lejátszó = dvdplay
+Internet Explorer = iexplore
+Microsoft Paint = mspaint
+Windows Media Player = wmplayer
+Wordpad = write
+Cetlijegyzetek = StikyNot
+Sajátkarakter-szerkesztő = eudcedit
+Faxoló és képolvasó = wfs
+Fax fedőlapszerkesztő = fxscover
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
